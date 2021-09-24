@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Future Age",
+      "setup": "",
+      "run": "java src/FutureAge.java",
+      "input": "1988\r\n2026",
+      "output": "You will be either 37 or 38 in 2026",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Lifetime Supply",
+      "setup": "",
+      "run": "java src/LifetimeSupply.java",
+      "input": "Snickers\r\n2\r\n30",
+      "output": "You will receive 2 Snickers per day, for a grand total of 51100 Snickers\r\n",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
