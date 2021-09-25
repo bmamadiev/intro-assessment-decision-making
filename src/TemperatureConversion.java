@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TemperatureConversion {
     public static void main(String[] args) {
         // Exercise Three - Temperature Converter
@@ -40,7 +42,7 @@ public class TemperatureConversion {
         // Remember that in order to divide a number accurately, you must use a double!  If you use an int
         // then you will get no numbers after the decimal place...
         //
-        // Step File:
+        // Step Five:
         // Now print your answer to the browser window using System.out.println()
         //
         // It should look like:
@@ -52,13 +54,29 @@ public class TemperatureConversion {
         //
         // Note that some of your numbers may have many decimal places!
         // Like 76.266666666667, that's perfectly fine!  You can leave those as is.
-        //
-        // Write your code here
-
 
         System.out.println("Welcome to the Temperate Converter!");
 
         // Write your code here
 
+        String unitOfTemp;
+        int numOfTemp;
+        Double result;
+
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.println("What would you like to convert to, Celsius or Fahrenheit? Enter c or f...");
+        unitOfTemp = myScanner.nextLine();
+
+        System.out.println("What value would you like to convert to? Enter a number.");
+        numOfTemp = myScanner.nextInt();
+
+        if (unitOfTemp.equals("c") || unitOfTemp.equals("C")) {
+            result = ((numOfTemp - 32.00) * 5) / 9;
+            System.out.println(numOfTemp + "°F converted to Celsius is " + result + "°C");
+        } else if (unitOfTemp.equals("f") || unitOfTemp.equals("F")) {
+            result = (numOfTemp / 5.00) * 9 + 32;
+            System.out.println(numOfTemp + "°C converted to Fahrenheit is " + result + "°F");
+        }
     }
 }

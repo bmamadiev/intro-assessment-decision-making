@@ -1,3 +1,6 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class LifetimeSupply {
     public static void main(String[] args) {
         // Exercise One - Computing a lifetime supply of your favorite snack!
@@ -36,9 +39,27 @@ public class LifetimeSupply {
         //
         // Then test out your program with different numbers and snack!
 
-        System.out.println("Congratulations!  You have won a lifetime supply of your favorite snack!");
-
         // Write your code here
 
+        String snack;
+        int numOfSnack;
+        int age;
+        int totalSnack;
+
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.println("What is your favourite snack?");
+        snack = myScanner.nextLine().toLowerCase();
+
+        System.out.println("How many " + snack + " do you eat per day?");
+        numOfSnack = myScanner.nextInt();
+
+        System.out.println("How old are you?");
+        age = myScanner.nextInt();
+
+        totalSnack = (100 - age) * 365 * numOfSnack;
+
+        System.out.println("Congratulations! You have won a lifetime supply of your favorite snack!");
+        System.out.println("You will receive " + numOfSnack + " " + snack + " per day, for a grand total of " + totalSnack + " " + snack + ".");
     }
 }

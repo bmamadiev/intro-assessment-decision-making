@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class FutureAge {
     public static void main(String[] args) {
         // Exercise Two - Calculating your future age.
@@ -27,5 +29,25 @@ public class FutureAge {
 
         // Write your code here
 
+        int birthYear;
+        int futureYear;
+
+        int futureAgeOne;
+        int futureAgeTwo;
+        String message;
+
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.println("Which year are you born?");
+        birthYear = myScanner.nextInt();
+
+        System.out.println("Choose any year from the future.");
+        futureYear = myScanner.nextInt();
+
+        futureAgeOne = futureYear - birthYear;
+        futureAgeTwo = futureAgeOne - 1;
+
+        message = "You will be either " + futureAgeOne + " or " + futureAgeTwo + " in " + futureYear + ".";
+        System.out.println(message);
     }
 }
